@@ -1,0 +1,8 @@
+{
+  "name": "TeX Live with Node.js",
+  "image": "ghcr.io/chofufestival/texlive-devcontainer-ja:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "remoteUser": "vscode"
+}
