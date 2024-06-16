@@ -24,4 +24,10 @@ EOF
 
 WORKDIR /
 
+RUN apt-get install locales -y \
+  && sed -i -E 's/# (ja_JP.UTF-8)/\1/' /etc/locale.gen \
+  && locale-gen \
+  && update-locale LANG=ja_JP.UTF-8 \
+  && echo "export LANG=ja_JP.UTF-8" >> /etc/bash.bashrc
+
 RUN rm -rf /texlive-install
